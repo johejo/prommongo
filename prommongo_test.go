@@ -21,7 +21,10 @@ func Test(t *testing.T) {
 	reg := prometheus.NewRegistry()
 	reg.MustRegister(cmc, pmc)
 
-	opts := options.Client().ApplyURI("mongodb://root:example@localhost:27017").SetMonitor(cmc.CommandMonitor(nil)).SetPoolMonitor(pmc.PoolMonitor(nil))
+	opts := options.Client().
+		ApplyURI("mongodb://root:example@localhost:27017").
+		SetMonitor(cmc.CommandMonitor(nil)).
+		SetPoolMonitor(pmc.PoolMonitor(nil))
 	client, err := mongo.NewClient(opts)
 	if err != nil {
 		t.Fatal(err)

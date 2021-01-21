@@ -30,7 +30,12 @@ func Example() {
 	reg := prometheus.NewRegistry()
 	reg.MustRegister(cmc, pmc)
 
-	client, err := mongo.NewClient(options.Client().ApplyURI("mongodb://root:example@localhost:27017").SetMonitor(cmc.CommandMonitor(nil)).SetPoolMonitor(pmc.PoolMonitor(nil)))
+	client, err := mongo.NewClient(
+		options.Client().
+			ApplyURI("mongodb://root:example@localhost:27017").
+			SetMonitor(cmc.CommandMonitor(nil)).
+			SetPoolMonitor(pmc.PoolMonitor(nil)),
+	)
 	if err != nil {
 		panic(err)
 	}
