@@ -67,15 +67,18 @@ func Example() {
 	}
 
 	// Output:
-	// go_mongo_command_duration
+	// go_mongo_command_duration_ns
 	// go_mongo_connection_closed
 	// go_mongo_connection_created
 	// go_mongo_connection_returnd
 	// go_mongo_get_failed
 	// go_mongo_get_succeeded
+	// go_mongo_max_pool_size
+	// go_mongo_min_pool_size
 	// go_mongo_pool_cleared
 	// go_mongo_pool_closed
 	// go_mongo_pool_created
+	// go_mongo_wait_queue_timeout_ms
 }
 ```
 
