@@ -4,5 +4,5 @@ go 1.15
 
 require (
 	github.com/prometheus/client_golang v1.11.0
-	go.mongodb.org/mongo-driver v1.5.4
+	go.mongodb.org/mongo-driver v1.6.0
 )
